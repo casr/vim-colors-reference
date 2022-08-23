@@ -134,6 +134,6 @@ See also
   - [vim:src/highlight.c](https://github.com/vim/vim/blob/471c0fa3ee/src/highlight.c#L129)
   - [vim:runtime/syntax/syncolor.vim](https://github.com/vim/vim/blob/ebdf3c964a/runtime/syntax/syncolor.vim)
   - [vim:src/optiondefs.h](https://github.com/vim/vim/blob/adce965162/src/optiondefs.h#L293)
-  - [neovim:runtime/syntax/syncolor.vim](https://github.com/neovim/neovim/blob/ee210b0f74/src/nvim/highlight_group.c#L89)
+  - [neovim:src/nvim/highlight_group.c](https://github.com/neovim/neovim/blob/ee210b0f74/src/nvim/highlight_group.c#L89)
   - [casr/vim-colors-normalise](https://github.com/casr/vim-colors-normalise)
   - [casr/vim-colors-chromatine](https://github.com/casr/vim-colors-chromatine)
