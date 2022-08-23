@@ -1,15 +1,16 @@
 " Vim color file
 " Description: Vim's default colour scheme
 " Maintainer: Chris Rawnsley <chris@puny.agency>
-" Version: Vim 9.0.0246
+" Version: Vim 9.0.0246, Neovim 0.7.2
 " Source: https://github.com/casr/vim-colors-reference
 " Modified: 2022 Aug 23
 
-" Attempts to represent Vim's default highlight groups referenced in:
+" Attempts to represent Vim & Neovim's default highlight groups referenced in:
 "
 "   - [vim/vim@471c0fa3ee] src/highlight.c
 "   - [vim/vim@ebdf3c964a] runtime/syntax/syncolor.vim
 "   - [vim/vim@adce965162] src/optiondefs.h
+"   - [neovim/neovim@ee210b0f74] src/nvim/highlight_group.c
 
 hi clear
 if exists('syntax_on')
@@ -261,3 +262,192 @@ hi default link Debug Special
 " ### HIGHLIGHT_INIT
 hi clear LineNrAbove
 hi clear LineNrBelow
+
+if has('nvim')
+	" src/nvim/highlight_group.c
+	" ---------------
+	" ### highlight_init_both
+	hi TermCursor cterm=reverse gui=reverse
+	hi default link WinSeparator VertSplit
+	hi default link LineNrAbove LineNr
+	hi default link LineNrBelow LineNr
+	hi default link Substitute Search
+	hi default link Whitespace NonText
+	hi default link MsgSeparator StatusLine
+	hi default link NormalFloat Pmenu
+	hi default link FloatBorder WinSeparator
+	hi default FloatShadow blend=80 guibg=Black
+	hi default FloatShadowThrough blend=100 guibg=Black
+	hi RedrawDebugNormal cterm=reverse gui=reverse
+	hi RedrawDebugClear ctermbg=Yellow guibg=Yellow
+	hi RedrawDebugComposed ctermbg=Green guibg=Green
+	hi RedrawDebugRecompose ctermbg=Red guibg=Red
+	hi default DiagnosticError ctermfg=1 guifg=Red
+	hi default DiagnosticWarn ctermfg=3 guifg=Orange
+	hi default DiagnosticInfo ctermfg=4 guifg=LightBlue
+	hi default DiagnosticHint ctermfg=7 guifg=LightGrey
+	hi default DiagnosticUnderlineError cterm=underline gui=underline guisp=Red
+	hi default DiagnosticUnderlineWarn cterm=underline gui=underline guisp=Orange
+	hi default DiagnosticUnderlineInfo cterm=underline gui=underline guisp=LightBlue
+	hi default DiagnosticUnderlineHint cterm=underline gui=underline guisp=LightGrey
+	hi default link DiagnosticVirtualTextError DiagnosticError
+	hi default link DiagnosticVirtualTextWarn DiagnosticWarn
+	hi default link DiagnosticVirtualTextInfo DiagnosticInfo
+	hi default link DiagnosticVirtualTextHint DiagnosticHint
+	hi default link DiagnosticFloatingError DiagnosticError
+	hi default link DiagnosticFloatingWarn DiagnosticWarn
+	hi default link DiagnosticFloatingInfo DiagnosticInfo
+	hi default link DiagnosticFloatingHint DiagnosticHint
+	hi default link DiagnosticSignError DiagnosticError
+	hi default link DiagnosticSignWarn DiagnosticWarn
+	hi default link DiagnosticSignInfo DiagnosticInfo
+	hi default link DiagnosticSignHint DiagnosticHint
+
+	" ### highlight_init_light
+	" nothing new
+
+	" ### highlight_init_dark
+	" nothing new
+
+	" ### highlight_init_cmdline
+	hi NvimInternalError ctermfg=Red ctermbg=Red guifg=Red guibg=Red
+	hi default link NvimAssignment Operator
+	hi default link NvimPlainAssignment NvimAssignment
+	hi default link NvimAugmentedAssignment NvimAssignment
+	hi default link NvimAssignmentWithAddition NvimAugmentedAssignment
+	hi default link NvimAssignmentWithSubtraction NvimAugmentedAssignment
+	hi default link NvimAssignmentWithConcatenation NvimAugmentedAssignment
+	hi default link NvimOperator Operator
+	hi default link NvimUnaryOperator NvimOperator
+	hi default link NvimUnaryPlus NvimUnaryOperator
+	hi default link NvimUnaryMinus NvimUnaryOperator
+	hi default link NvimNot NvimUnaryOperator
+	hi default link NvimBinaryOperator NvimOperator
+	hi default link NvimComparison NvimBinaryOperator
+	hi default link NvimComparisonModifier NvimComparison
+	hi default link NvimBinaryPlus NvimBinaryOperator
+	hi default link NvimBinaryMinus NvimBinaryOperator
+	hi default link NvimConcat NvimBinaryOperator
+	hi default link NvimConcatOrSubscript NvimConcat
+	hi default link NvimOr NvimBinaryOperator
+	hi default link NvimAnd NvimBinaryOperator
+	hi default link NvimMultiplication NvimBinaryOperator
+	hi default link NvimDivision NvimBinaryOperator
+	hi default link NvimMod NvimBinaryOperator
+	hi default link NvimTernary NvimOperator
+	hi default link NvimTernaryColon NvimTernary
+	hi default link NvimParenthesis Delimiter
+	hi default link NvimLambda NvimParenthesis
+	hi default link NvimNestingParenthesis NvimParenthesis
+	hi default link NvimCallingParenthesis NvimParenthesis
+	hi default link NvimSubscript NvimParenthesis
+	hi default link NvimSubscriptBracket NvimSubscript
+	hi default link NvimSubscriptColon NvimSubscript
+	hi default link NvimCurly NvimSubscript
+	hi default link NvimContainer NvimParenthesis
+	hi default link NvimDict NvimContainer
+	hi default link NvimList NvimContainer
+	hi default link NvimIdentifier Identifier
+	hi default link NvimIdentifierScope NvimIdentifier
+	hi default link NvimIdentifierScopeDelimiter NvimIdentifier
+	hi default link NvimIdentifierName NvimIdentifier
+	hi default link NvimIdentifierKey NvimIdentifier
+	hi default link NvimColon Delimiter
+	hi default link NvimComma Delimiter
+	hi default link NvimArrow Delimiter
+	hi default link NvimRegister SpecialChar
+	hi default link NvimNumber Number
+	hi default link NvimFloat NvimNumber
+	hi default link NvimNumberPrefix Type
+	hi default link NvimOptionSigil Type
+	hi default link NvimOptionName NvimIdentifier
+	hi default link NvimOptionScope NvimIdentifierScope
+	hi default link NvimOptionScopeDelimiter NvimIdentifierScopeDelimiter
+	hi default link NvimEnvironmentSigil NvimOptionSigil
+	hi default link NvimEnvironmentName NvimIdentifier
+	hi default link NvimString String
+	hi default link NvimStringBody NvimString
+	hi default link NvimStringQuote NvimString
+	hi default link NvimStringSpecial SpecialChar
+	hi default link NvimSingleQuote NvimStringQuote
+	hi default link NvimSingleQuotedBody NvimStringBody
+	hi default link NvimSingleQuotedQuote NvimStringSpecial
+	hi default link NvimDoubleQuote NvimStringQuote
+	hi default link NvimDoubleQuotedBody NvimStringBody
+	hi default link NvimDoubleQuotedEscape NvimStringSpecial
+	hi default link NvimFigureBrace NvimInternalError
+	hi default link NvimSingleQuotedUnknownEscape NvimInternalError
+	hi default link NvimSpacing Normal
+	hi default link NvimInvalidSingleQuotedUnknownEscape NvimInternalError
+	hi default link NvimInvalid Error
+	hi default link NvimInvalidAssignment NvimInvalid
+	hi default link NvimInvalidPlainAssignment NvimInvalidAssignment
+	hi default link NvimInvalidAugmentedAssignment NvimInvalidAssignment
+	hi default link NvimInvalidAssignmentWithAddition NvimInvalidAugmentedAssignment
+	hi default link NvimInvalidAssignmentWithSubtraction NvimInvalidAugmentedAssignment
+	hi default link NvimInvalidAssignmentWithConcatenation NvimInvalidAugmentedAssignment
+	hi default link NvimInvalidOperator NvimInvalid
+	hi default link NvimInvalidUnaryOperator NvimInvalidOperator
+	hi default link NvimInvalidUnaryPlus NvimInvalidUnaryOperator
+	hi default link NvimInvalidUnaryMinus NvimInvalidUnaryOperator
+	hi default link NvimInvalidNot NvimInvalidUnaryOperator
+	hi default link NvimInvalidBinaryOperator NvimInvalidOperator
+	hi default link NvimInvalidComparison NvimInvalidBinaryOperator
+	hi default link NvimInvalidComparisonModifier NvimInvalidComparison
+	hi default link NvimInvalidBinaryPlus NvimInvalidBinaryOperator
+	hi default link NvimInvalidBinaryMinus NvimInvalidBinaryOperator
+	hi default link NvimInvalidConcat NvimInvalidBinaryOperator
+	hi default link NvimInvalidConcatOrSubscript NvimInvalidConcat
+	hi default link NvimInvalidOr NvimInvalidBinaryOperator
+	hi default link NvimInvalidAnd NvimInvalidBinaryOperator
+	hi default link NvimInvalidMultiplication NvimInvalidBinaryOperator
+	hi default link NvimInvalidDivision NvimInvalidBinaryOperator
+	hi default link NvimInvalidMod NvimInvalidBinaryOperator
+	hi default link NvimInvalidTernary NvimInvalidOperator
+	hi default link NvimInvalidTernaryColon NvimInvalidTernary
+	hi default link NvimInvalidDelimiter NvimInvalid
+	hi default link NvimInvalidParenthesis NvimInvalidDelimiter
+	hi default link NvimInvalidLambda NvimInvalidParenthesis
+	hi default link NvimInvalidNestingParenthesis NvimInvalidParenthesis
+	hi default link NvimInvalidCallingParenthesis NvimInvalidParenthesis
+	hi default link NvimInvalidSubscript NvimInvalidParenthesis
+	hi default link NvimInvalidSubscriptBracket NvimInvalidSubscript
+	hi default link NvimInvalidSubscriptColon NvimInvalidSubscript
+	hi default link NvimInvalidCurly NvimInvalidSubscript
+	hi default link NvimInvalidContainer NvimInvalidParenthesis
+	hi default link NvimInvalidDict NvimInvalidContainer
+	hi default link NvimInvalidList NvimInvalidContainer
+	hi default link NvimInvalidValue NvimInvalid
+	hi default link NvimInvalidIdentifier NvimInvalidValue
+	hi default link NvimInvalidIdentifierScope NvimInvalidIdentifier
+	hi default link NvimInvalidIdentifierScopeDelimiter NvimInvalidIdentifier
+	hi default link NvimInvalidIdentifierName NvimInvalidIdentifier
+	hi default link NvimInvalidIdentifierKey NvimInvalidIdentifier
+	hi default link NvimInvalidColon NvimInvalidDelimiter
+	hi default link NvimInvalidComma NvimInvalidDelimiter
+	hi default link NvimInvalidArrow NvimInvalidDelimiter
+	hi default link NvimInvalidRegister NvimInvalidValue
+	hi default link NvimInvalidNumber NvimInvalidValue
+	hi default link NvimInvalidFloat NvimInvalidNumber
+	hi default link NvimInvalidNumberPrefix NvimInvalidNumber
+	hi default link NvimInvalidOptionSigil NvimInvalidIdentifier
+	hi default link NvimInvalidOptionName NvimInvalidIdentifier
+	hi default link NvimInvalidOptionScope NvimInvalidIdentifierScope
+	hi default link NvimInvalidOptionScopeDelimiter NvimInvalidIdentifierScopeDelimiter
+	hi default link NvimInvalidEnvironmentSigil NvimInvalidOptionSigil
+	hi default link NvimInvalidEnvironmentName NvimInvalidIdentifier
+	hi default link NvimInvalidString NvimInvalidValue
+	hi default link NvimInvalidStringBody NvimStringBody
+	hi default link NvimInvalidStringQuote NvimInvalidString
+	hi default link NvimInvalidStringSpecial NvimStringSpecial
+	hi default link NvimInvalidSingleQuote NvimInvalidStringQuote
+	hi default link NvimInvalidSingleQuotedBody NvimInvalidStringBody
+	hi default link NvimInvalidSingleQuotedQuote NvimInvalidStringSpecial
+	hi default link NvimInvalidDoubleQuote NvimInvalidStringQuote
+	hi default link NvimInvalidDoubleQuotedBody NvimInvalidStringBody
+	hi default link NvimInvalidDoubleQuotedEscape NvimInvalidStringSpecial
+	hi default link NvimInvalidDoubleQuotedUnknownEscape NvimInvalidValue
+	hi default link NvimInvalidFigureBrace NvimInvalidDelimiter
+	hi default link NvimInvalidSpacing ErrorMsg
+	hi default link NvimDoubleQuotedUnknownEscape NvimInvalidValue
+endif

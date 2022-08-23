@@ -88,6 +88,45 @@ How to trigger various highlight groups
 | `StatusLineTerm`   | `:terminal`                                                                            |
 | `StatusLineTermNC` | as above but not the current window, `<Esc><C-w><C-w>`                                 |
 
+### Neovim-specific highlight groups
+
+| Highlight group    | When it’s used                                                                         |
+|--------------------|----------------------------------------------------------------------------------------|
+| `TermCursor`       | `:h hl-TermCursor`                                                                     |
+| `WinSeparator`     | supersedes `VertSplit`. Can be used for horizontal splits when `:set laststatus=3`     |
+| `Substitute`       | `:s/this text/that text/`. Highlights the changed region                               |
+| `Whitespace`       | `set list` and see nbsp, space, tab, etc. `:h hl-Whitespace`                           |
+| `MsgSeparator`     | Run an external command like `:!ls`. It's the divider between Vim and the output       |
+| `NormalFloat`      | `:h hl-NormalFloat`                                                                    |
+| `FloatBorder`      | `:h nvim_open_win()`                                                                   |
+| `FloatShadow`      | `:h nvim_open_win()`. `/"shadow`                                                       |
+| `FloatShadowThrough`         | `:h nvim_open_win()`. `/"shadow`                                             |
+| `RedrawDebugNormal`          | `:h redrawdebug`                                                             |
+| `RedrawDebugClear`           | `:h redrawdebug`                                                             |
+| `RedrawDebugComposed`        | `:h redrawdebug`                                                             |
+| `RedrawDebugRecompose`       | `:h redrawdebug`                                                             |
+| `DiagnosticError`  | `:h hl-DiagnosticError`                                                                |
+| `DiagnosticWarn`   | `:h hl-DiagnosticWarn`                                                                 |
+| `DiagnosticInfo`   | `:h hl-DiagnosticInfo`                                                                 |
+| `DiagnosticHint`   | `:h hl-DiagnosticHint`                                                                 |
+| `DiagnosticUnderlineError`   | `:h hl-DiagnosticUnderlineError`                                             |
+| `DiagnosticUnderlineWarn`    | `:h hl-DiagnosticUnderlineWarn`                                              |
+| `DiagnosticUnderlineInfo`    | `:h hl-DiagnosticUnderlineInfo`                                              |
+| `DiagnosticUnderlineHint`    | `:h hl-DiagnosticUnderlineHint`                                              |
+| `DiagnosticVirtualTextError` | `:h hl-DiagnosticVirtualTextError`                                           |
+| `DiagnosticVirtualTextWarn`  | `:h hl-DiagnosticVirtualTextWarn`                                            |
+| `DiagnosticVirtualTextInfo`  | `:h hl-DiagnosticVirtualTextInfo`                                            |
+| `DiagnosticVirtualTextHint`  | `:h hl-DiagnosticVirtualTextHint`                                            |
+| `DiagnosticFloatingError`    | `:h hl-DiagnosticFloatingError`                                              |
+| `DiagnosticFloatingWarn`     | `:h hl-DiagnosticFloatingWarn`                                               |
+| `DiagnosticFloatingInfo`     | `:h hl-DiagnosticFloatingInfo`                                               |
+| `DiagnosticFloatingHint`     | `:h hl-DiagnosticFloatingHint`                                               |
+| `DiagnosticSignError`        | `:h hl-DiagnosticSignError`                                                  |
+| `DiagnosticSignWarn`         | `:h hl-DiagnosticSignWarn`                                                   |
+| `DiagnosticSignInfo`         | `:h hl-DiagnosticSignInfo`                                                   |
+| `DiagnosticSignHint`         | `:h hl-DiagnosticSignHint`                                                   |
+| `Nvim*`                      | `:h expr-highlight`. In short, syntax highlighting for cmd line              |
+
 
 See also
 --------
@@ -95,5 +134,6 @@ See also
   - [vim:src/highlight.c](https://github.com/vim/vim/blob/471c0fa3ee/src/highlight.c#L129)
   - [vim:runtime/syntax/syncolor.vim](https://github.com/vim/vim/blob/ebdf3c964a/runtime/syntax/syncolor.vim)
   - [vim:src/optiondefs.h](https://github.com/vim/vim/blob/adce965162/src/optiondefs.h#L293)
+  - [neovim:runtime/syntax/syncolor.vim](https://github.com/neovim/neovim/blob/ee210b0f74/src/nvim/highlight_group.c#L89)
   - [casr/vim-colors-normalise](https://github.com/casr/vim-colors-normalise)
   - [casr/vim-colors-chromatine](https://github.com/casr/vim-colors-chromatine)
