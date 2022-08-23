@@ -3,7 +3,7 @@
 " Maintainer: Chris Rawnsley <chris@puny.agency>
 " Version: Vim 8.2.0635
 " Source: https://github.com/casr/vim-colors-reference
-" Modified: 2020 May 1
+" Modified: 2022 Aug 23
 
 " Attempts to represent Vim's default highlight groups referenced in:
 "
@@ -47,7 +47,7 @@ if has('gui_running')
 endif
 
 hi link QuickFixLine Search
-hi Normal gui=NONE
+hi Normal cterm=NONE gui=NONE
 
 " ### highlight_init_light
 if &background ==# 'light'
