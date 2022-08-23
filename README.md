@@ -20,7 +20,7 @@ hunting for what the default highlight groups are.
 How to trigger various highlight groups
 ---------------------------------------
 
-| Highlight group    | When it used                                                                           |
+| Highlight group    | When it’s used                                                                         |
 |--------------------|----------------------------------------------------------------------------------------|
 | `Normal`           | main background and text colour                                                        |
 | `Directory`        | `:Ex /`                                                                                |
