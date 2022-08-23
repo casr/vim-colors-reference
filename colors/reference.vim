@@ -1,15 +1,15 @@
 " Vim color file
 " Description: Vim's default colour scheme
 " Maintainer: Chris Rawnsley <chris@puny.agency>
-" Version: Vim 8.2.0635
+" Version: Vim 9.0.0246
 " Source: https://github.com/casr/vim-colors-reference
 " Modified: 2022 Aug 23
 
 " Attempts to represent Vim's default highlight groups referenced in:
 "
-"   - [vim/vim@e93c968f52] src/highlight.c
+"   - [vim/vim@471c0fa3ee] src/highlight.c
 "   - [vim/vim@ebdf3c964a] runtime/syntax/syncolor.vim
-"   - [vim/vim@6b915c0c0e] src/optiondefs.h
+"   - [vim/vim@adce965162] src/optiondefs.h
 
 hi clear
 if exists('syntax_on')
@@ -48,6 +48,9 @@ if has('gui_running')
 endif
 
 hi default link QuickFixLine Search
+hi default link CursorLineSign SignColumn
+hi default link CursorLineFold SignColumn
+hi default link CurSearch Search
 hi Normal cterm=NONE gui=NONE
 
 " ### highlight_init_light

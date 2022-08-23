@@ -43,6 +43,7 @@ How to trigger various highlight groups
 | `Question`         | `:!ls` (the hit-enter prompt)                                                          |
 | `QuickFixLine`     | `:vimgrep 'a' %:h/**`, `:copen`, `<CR>`. Highlights line                               |
 | `Search`           | `/Search`                                                                              |
+| `CurSearch`        | `/Search`. The current match is styled this way                                        |
 | `SpecialKey`       | `:set list` or `:map`                                                                  |
 | `StatusLine`       | `:set laststatus=2`, active status bar                                                 |
 | `StatusLineNC`     | `:sp`, inactive status bar                                                             |
@@ -59,6 +60,7 @@ How to trigger various highlight groups
 | `DiffText`         | as above, this is the text that changed in DiffChange line                             |
 | `Folded`           | how a fold looks                                                                       |
 | `FoldColumn`       | how fold areas are displayed in the fold column                                        |
+| `CursorLineFold`   | fold column style when `:set cursorline` is active                                     |
 | `ToolbarLine`      | ???                                                                                    |
 | `ToolbarButton`    | ???                                                                                    |
 | `SpellBad`         | `:set spell spelllang=en_gb`, teh                                                      |
@@ -82,6 +84,7 @@ How to trigger various highlight groups
 | `WildMenu`         | `:e /<Tab>`                                                                            |
 | `Conceal`          | `:set conceallevel=1`, write out a link in Markdown                                    |
 | `SignColumn`       | `:set signcolumn=yes`                                                                  |
+| `CursorLineSign`   | sign column style when `:set cursorline` is active                                     |
 | `StatusLineTerm`   | `:terminal`                                                                            |
 | `StatusLineTermNC` | as above but not the current window, `<Esc><C-w><C-w>`                                 |
 
@@ -89,8 +92,8 @@ How to trigger various highlight groups
 See also
 --------
 
-  - [vim:src/highlight.c](https://github.com/vim/vim/blob/e93c968f52/src/highlight.c)
+  - [vim:src/highlight.c](https://github.com/vim/vim/blob/471c0fa3ee/src/highlight.c#L129)
   - [vim:runtime/syntax/syncolor.vim](https://github.com/vim/vim/blob/ebdf3c964a/runtime/syntax/syncolor.vim)
-  - [vim:src/optiondefs.h](https://github.com/vim/vim/blob/6b915c0c0e/src/optiondefs.h#L295)
+  - [vim:src/optiondefs.h](https://github.com/vim/vim/blob/adce965162/src/optiondefs.h#L293)
   - [casr/vim-colors-normalise](https://github.com/casr/vim-colors-normalise)
   - [casr/vim-colors-chromatine](https://github.com/casr/vim-colors-chromatine)
