@@ -26,7 +26,7 @@ hi ModeMsg term=bold cterm=bold gui=bold
 hi NonText term=bold ctermfg=Blue gui=bold guifg=Blue
 hi StatusLine term=reverse,bold cterm=reverse,bold gui=reverse,bold
 hi StatusLineNC term=reverse cterm=reverse gui=reverse
-hi link EndOfBuffer NonText
+hi default link EndOfBuffer NonText
 hi VertSplit term=reverse cterm=reverse gui=reverse
 
 if has('clipboard')
@@ -46,7 +46,7 @@ if has('gui_running')
 	hi lCursor guibg=fg guifg=bg
 endif
 
-hi link QuickFixLine Search
+hi default link QuickFixLine Search
 hi Normal cterm=NONE gui=NONE
 
 " ### highlight_init_light
@@ -225,27 +225,27 @@ endif
 hi Error term=reverse cterm=NONE ctermfg=White ctermbg=Red gui=NONE guifg=White guibg=Red
 hi Todo term=standout cterm=NONE ctermfg=Black ctermbg=Yellow gui=NONE guifg=Blue guibg=Yellow
 
-hi link String Constant
-hi link Character Constant
-hi link Number Constant
-hi link Boolean Constant
-hi link Float Number
-hi link Function Identifier
-hi link Conditional Statement
-hi link Repeat Statement
-hi link Label Statement
-hi link Operator Statement
-hi link Keyword Statement
-hi link Exception Statement
-hi link Include PreProc
-hi link Define PreProc
-hi link Macro PreProc
-hi link PreCondit PreProc
-hi link StorageClass Type
-hi link Structure Type
-hi link Typedef Type
-hi link Tag Special
-hi link SpecialChar Special
-hi link Delimiter Special
-hi link SpecialComment Special
-hi link Debug Special
+hi default link String Constant
+hi default link Character Constant
+hi default link Number Constant
+hi default link Boolean Constant
+hi default link Float Number
+hi default link Function Identifier
+hi default link Conditional Statement
+hi default link Repeat Statement
+hi default link Label Statement
+hi default link Operator Statement
+hi default link Keyword Statement
+hi default link Exception Statement
+hi default link Include PreProc
+hi default link Define PreProc
+hi default link Macro PreProc
+hi default link PreCondit PreProc
+hi default link StorageClass Type
+hi default link Structure Type
+hi default link Typedef Type
+hi default link Tag Special
+hi default link SpecialChar Special
+hi default link Delimiter Special
+hi default link SpecialComment Special
+hi default link Debug Special
