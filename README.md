@@ -92,11 +92,15 @@ How to trigger various highlight groups
 
 | Highlight group    | When it’s used                                                                         |
 |--------------------|----------------------------------------------------------------------------------------|
+| `NormalNC`         | The inactive split's `Normal` value                                                    |
+| `VisualNC`         | ???                                                                                    |
 | `TermCursor`       | `:h hl-TermCursor`                                                                     |
+| `TermCursorNC`     | `:h hl-TermCursorNC`                                                                   |
 | `WinSeparator`     | supersedes `VertSplit`. Can be used for horizontal splits when `:set laststatus=3`     |
 | `Substitute`       | `:s/this text/that text/`. Highlights the changed region                               |
 | `Whitespace`       | `set list` and see nbsp, space, tab, etc. `:h hl-Whitespace`                           |
 | `MsgSeparator`     | Run an external command like `:!ls`. It's the divider between Vim and the output       |
+| `MsgArea`          | The `:messages` and cmd line area                                                      |
 | `NormalFloat`      | `:h hl-NormalFloat`                                                                    |
 | `FloatBorder`      | `:h nvim_open_win()`                                                                   |
 | `FloatShadow`      | `:h nvim_open_win()`. `/"shadow`                                                       |
@@ -134,6 +138,7 @@ See also
   - [vim:src/highlight.c](https://github.com/vim/vim/blob/471c0fa3ee/src/highlight.c#L129)
   - [vim:runtime/syntax/syncolor.vim](https://github.com/vim/vim/blob/ebdf3c964a/runtime/syntax/syncolor.vim)
   - [vim:src/optiondefs.h](https://github.com/vim/vim/blob/adce965162/src/optiondefs.h#L293)
+  - [neovim:src/nvim/highlight_defs.c](https://github.com/neovim/neovim/blob/e8ee673392/src/nvim/highlight_defs.h#L117)
   - [neovim:src/nvim/highlight_group.c](https://github.com/neovim/neovim/blob/ee210b0f74/src/nvim/highlight_group.c#L89)
   - [casr/vim-colors-normalise](https://github.com/casr/vim-colors-normalise)
   - [casr/vim-colors-chromatine](https://github.com/casr/vim-colors-chromatine)

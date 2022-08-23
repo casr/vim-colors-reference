@@ -10,6 +10,7 @@
 "   - [vim/vim@471c0fa3ee] src/highlight.c
 "   - [vim/vim@ebdf3c964a] runtime/syntax/syncolor.vim
 "   - [vim/vim@adce965162] src/optiondefs.h
+"   - [neovim/neovim@e8ee673392] src/nvim/highlight_defs.h
 "   - [neovim/neovim@ee210b0f74] src/nvim/highlight_group.c
 
 hi clear
@@ -450,4 +451,10 @@ if has('nvim')
 	hi default link NvimInvalidFigureBrace NvimInvalidDelimiter
 	hi default link NvimInvalidSpacing ErrorMsg
 	hi default link NvimDoubleQuotedUnknownEscape NvimInvalidValue
+
+	" ### hlf_names[]
+	hi clear TermCursorNC
+	hi clear VisualNC
+	hi clear NormalNC
+	hi clear MsgArea
 endif
