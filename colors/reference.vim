@@ -9,6 +9,7 @@
 "
 "   - [vim/vim@e93c968f52] src/highlight.c
 "   - [vim/vim@ebdf3c964a] runtime/syntax/syncolor.vim
+"   - [vim/vim@6b915c0c0e] src/optiondefs.h
 
 hi clear
 if exists('syntax_on')
@@ -249,3 +250,11 @@ hi default link SpecialChar Special
 hi default link Delimiter Special
 hi default link SpecialComment Special
 hi default link Debug Special
+
+" Others that are initialised but cleared:
+
+" src/optiondefs.h
+" ---------------
+" ### HIGHLIGHT_INIT
+hi clear LineNrAbove
+hi clear LineNrBelow

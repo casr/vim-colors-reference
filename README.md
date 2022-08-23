@@ -29,7 +29,9 @@ How to trigger various highlight groups
 | `VertSplit`        | open a vertical split and see the bar                                                  |
 | `IncSearch`        | `set incsearch` and then `:%s/mysearch` it will highlight as you type                  |
 | `LineNr`           | the numbers after `:set number`                                                        |
-| `CursorLineNr`     | same as above but specific to the line the cursor is on                                |
+| `LineNrAbove`      | `:set number relativenumber`. Numbers above current line are styled this way           |
+| `LineNrBelow`      | `:set number relativenumber`. Numbers below current line are styled this way           |
+| `CursorLineNr`     | same as `LineNr` but specific to the line the cursor is on                             |
 | `MatchParen`       | a matching pair of brackets                                                            |
 | `ModeMsg`          | enter insert mode to see the style                                                     |
 | `MoreMsg`          | view the output of a command like `:hi` or `:map`                                      |
@@ -89,5 +91,6 @@ See also
 
   - [vim:src/highlight.c](https://github.com/vim/vim/blob/e93c968f52/src/highlight.c)
   - [vim:runtime/syntax/syncolor.vim](https://github.com/vim/vim/blob/ebdf3c964a/runtime/syntax/syncolor.vim)
+  - [vim:src/optiondefs.h](https://github.com/vim/vim/blob/6b915c0c0e/src/optiondefs.h#L295)
   - [casr/vim-colors-normalise](https://github.com/casr/vim-colors-normalise)
   - [casr/vim-colors-chromatine](https://github.com/casr/vim-colors-chromatine)
