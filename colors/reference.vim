@@ -1,15 +1,15 @@
 " Vim color file
 " Description: Vim's default colour scheme
 " Maintainer: Chris Rawnsley <chris@puny.agency>
-" Version: Vim 9.0.0246, Neovim 0.7.2
+" Version: Vim 9.0.0364, Neovim 0.7.2
 " Source: https://github.com/casr/vim-colors-reference
-" Modified: 2022 Aug 23
+" Modified: 2022 Oct 20
 
 " Attempts to represent Vim & Neovim's default highlight groups referenced in:
 "
-"   - [vim/vim@471c0fa3ee] src/highlight.c
+"   - [vim/vim@c99e182e1f] src/highlight.c
 "   - [vim/vim@ebdf3c964a] runtime/syntax/syncolor.vim
-"   - [vim/vim@adce965162] src/optiondefs.h
+"   - [vim/vim@49846fb1a3] src/optiondefs.h
 "   - [neovim/neovim@e8ee673392] src/nvim/highlight_defs.h
 "   - [neovim/neovim@ee210b0f74] src/nvim/highlight_group.c
 
@@ -77,10 +77,7 @@ if &background ==# 'light'
 	hi SpecialKey term=bold ctermfg=DarkBlue guifg=Blue
 	hi Title term=bold ctermfg=DarkMagenta gui=bold guifg=Magenta
 	hi WarningMsg term=standout ctermfg=DarkRed guifg=Red
-
-	if has('wildmenu')
-		hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
-	endif
+	hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 
 	if has('folding')
 		hi Folded term=standout ctermbg=Grey ctermfg=DarkBlue guibg=LightGrey guifg=DarkBlue
@@ -144,10 +141,7 @@ else
 	hi PmenuSel ctermbg=Black ctermfg=DarkGrey guibg=DarkGrey
 	hi Title term=bold ctermfg=LightMagenta gui=bold guifg=Magenta
 	hi WarningMsg term=standout ctermfg=LightRed guifg=Red
-
-	if has('wildmenu')
-		hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
-	endif
+	hi WildMenu term=standout ctermbg=Yellow ctermfg=Black guibg=Yellow guifg=Black
 
 	if has('folding')
 		hi Folded term=standout ctermbg=DarkGrey ctermfg=Cyan guibg=DarkGrey guifg=Cyan
