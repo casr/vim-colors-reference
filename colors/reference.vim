@@ -1,7 +1,7 @@
 " Vim color file
 " Description: Vim's default colour scheme
 " Maintainer: Chris Rawnsley <chris@puny.agency>
-" Version: Vim 9.0.0364, Neovim 0.7.2
+" Version: Vim 9.0.0364, Neovim 0.8.0
 " Source: https://github.com/casr/vim-colors-reference
 " Modified: 2022 Oct 20
 
@@ -10,8 +10,8 @@
 "   - [vim/vim@c99e182e1f] src/highlight.c
 "   - [vim/vim@ebdf3c964a] runtime/syntax/syncolor.vim
 "   - [vim/vim@49846fb1a3] src/optiondefs.h
-"   - [neovim/neovim@e8ee673392] src/nvim/highlight_defs.h
-"   - [neovim/neovim@ee210b0f74] src/nvim/highlight_group.c
+"   - [neovim/neovim@d879331b0d] src/nvim/highlight_defs.h
+"   - [neovim/neovim@df646572c5] src/nvim/highlight_group.c
 
 hi clear
 if exists('syntax_on')
@@ -263,7 +263,10 @@ if has('nvim')
 	" ---------------
 	" ### highlight_init_both
 	hi TermCursor cterm=reverse gui=reverse
+	hi WinBar cterm=bold gui=bold
+	hi default link VertSplit Normal
 	hi default link WinSeparator VertSplit
+	hi default link WinBarNC WinBar
 	hi default link LineNrAbove LineNr
 	hi default link LineNrBelow LineNr
 	hi default link Substitute Search
@@ -297,6 +300,57 @@ if has('nvim')
 	hi default link DiagnosticSignWarn DiagnosticWarn
 	hi default link DiagnosticSignInfo DiagnosticInfo
 	hi default link DiagnosticSignHint DiagnosticHint
+
+	if has("nvim-0.8")
+		" Treesitter Highlight Groups
+
+		hi default link @text.underline Underlined
+		hi default link @todo Todo
+		hi default link @debug Debug
+
+		" Miscs
+		hi default link @comment Comment
+		hi default link @punctuation Delimiter
+
+		" Constants
+		hi default link @constant Constant
+		hi default link @constant.builtin Special
+		hi default link @constant.macro Define
+		hi default link @define Define
+		hi default link @macro Macro
+		hi default link @string String
+		hi default link @string.escape SpecialChar
+		hi default link @character Character
+		hi default link @character.special SpecialChar
+		hi default link @number Number
+		hi default link @boolean Boolean
+		hi default link @float Float
+
+		" Functions
+		hi default link @function Function
+		hi default link @function.builtin Special
+		hi default link @function.macro Macro
+		hi default link @parameter Identifier
+		hi default link @method Function
+		hi default link @field Identifier
+		hi default link @property Identifier
+		hi default link @constructor Special
+
+		" Keywords
+		hi default link @conditional Conditional
+		hi default link @repeat Repeat
+		hi default link @label Label
+		hi default link @operator Operator
+		hi default link @keyword Keyword
+		hi default link @exception Exception
+
+		hi default link @type Type
+		hi default link @type.definition Typedef
+		hi default link @storageclass StorageClass
+		hi default link @structure Structure
+		hi default link @include Include
+		hi default link @preproc PreProc
+	endif
 
 	" ### highlight_init_light
 	" nothing new
