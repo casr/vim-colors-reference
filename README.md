@@ -96,6 +96,8 @@ How to trigger various highlight groups
 | `VisualNC`         | ???                                                                                    |
 | `TermCursor`       | `:h hl-TermCursor`                                                                     |
 | `TermCursorNC`     | `:h hl-TermCursorNC`                                                                   |
+| `WinBar`           | `set winbar=blah\ blah\ blah`, `:h 'winbar'`, `:h hl-WinBar`                           |
+| `WinBarNC`         | The inactive version of the above, `:h hl-WinBarNC`                                    |
 | `WinSeparator`     | supersedes `VertSplit`. Can be used for horizontal splits when `:set laststatus=3`     |
 | `Substitute`       | `:s/this text/that text/`. Highlights the changed region                               |
 | `Whitespace`       | `set list` and see nbsp, space, tab, etc. `:h hl-Whitespace`                           |
@@ -130,6 +132,7 @@ How to trigger various highlight groups
 | `DiagnosticSignInfo`         | `:h hl-DiagnosticSignInfo`                                                   |
 | `DiagnosticSignHint`         | `:h hl-DiagnosticSignHint`                                                   |
 | `Nvim*`                      | `:h expr-highlight`. In short, syntax highlighting for cmd line              |
+| `@number`, `@constant`, etc. | `:h treesitter-highlight-groups`                                             |
 
 
 See also
