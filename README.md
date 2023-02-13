@@ -133,6 +133,9 @@ How to trigger various highlight groups
 | `DiagnosticSignHint`         | `:h hl-DiagnosticSignHint`                                                   |
 | `Nvim*`                      | `:h expr-highlight`. In short, syntax highlighting for cmd line              |
 | `@number`, `@constant`, etc. | `:h treesitter-highlight-groups`                                             |
+| `LspReferenceText`           | e.g. highlight variable's other uses in buffer, `:h hl-LspReferenceText`     |
+| `LspReferenceRead`           | e.g. highlight variable's other uses in buffer, `:h hl-LspReferenceRead`     |
+| `LspReferenceWrite`          | e.g. highlight variable's other uses in buffer, `:h hl-LspReferenceWrite`    |
 
 
 See also

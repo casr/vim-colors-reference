@@ -253,14 +253,14 @@ hi default link Debug Special
 " Others that are initialised but cleared:
 
 " src/optiondefs.h
-" ---------------
+" ----------------
 " ### HIGHLIGHT_INIT
 hi clear LineNrAbove
 hi clear LineNrBelow
 
 if has('nvim')
 	" src/nvim/highlight_group.c
-	" ---------------
+	" --------------------------
 	" ### highlight_init_both
 	hi TermCursor cterm=reverse gui=reverse
 	hi WinBar cterm=bold gui=bold
@@ -505,4 +505,10 @@ if has('nvim')
 	hi clear VisualNC
 	hi clear NormalNC
 	hi clear MsgArea
+
+	" runtime/lua/vim/lsp/util.lua
+	" ----------------------------
+	hi clear LspReferenceText
+	hi clear LspReferenceRead
+	hi clear LspReferenceWrite
 endif
